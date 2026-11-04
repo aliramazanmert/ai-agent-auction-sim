@@ -1,0 +1,23 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "should_bid": { "type": "noul", "noul": 0.42 },
+    "bid": {
+      "type": "choice",
+      "choice": "30",
+      "confidence": 0.51,
+      "probabilities": {
+        "20": 0.20,
+        "30": 0.35,
+        "40": 0.18,
+        "50": 0.09,
+        "60": 0.06,
+        "70": 0.04,
+        "80": 0.03,
+        "90": 0.03,
+        "100": 0.02
+      }
+    }
+  },
+  "usage": { "input_tokens": 284, "output_tokens": 28 }
+}
