@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { AgentId, SettlementRow } from "../engine/model";
 import type { JevDecision } from "../jev/contract";
 import { PROFILES } from "../profiles";
@@ -26,8 +26,6 @@ const money = (value: number) => `$${value}`;
 
 export function Hud(props: Props) {
   const [raw, setRaw] = useState("");
-
-  useEffect(() => setRaw(""), [props.currentAgent?.id]);
 
   return (
     <section className="hud" aria-label="Auction control panel">
