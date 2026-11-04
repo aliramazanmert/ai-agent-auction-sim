@@ -93,40 +93,6 @@ button {
   box-shadow: 0 0 0 0.22rem rgb(121 210 178 / 12%);
 }
 
-.scene-label {
-  min-width: 8.5rem;
-  display: grid;
-  gap: 0.15rem;
-  padding: 0.4rem 0.55rem;
-  border: 1px solid rgb(255 255 255 / 16%);
-  border-radius: 0.4rem;
-  color: #f5f8fa;
-  background: rgb(5 10 13 / 78%);
-  box-shadow: 0 0.45rem 1.4rem rgb(0 0 0 / 32%);
-  text-align: center;
-  white-space: nowrap;
-}
-
-.scene-label strong {
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.scene-label small {
-  color: #a9bbc4;
-  font-size: 0.58rem;
-}
-
-.bid-label {
-  padding: 0.22rem 0.42rem;
-  border-radius: 999px;
-  color: #0b1216;
-  background: #c8d6dc;
-  font-size: 0.68rem;
-  font-weight: 800;
-}
-
 .hud {
   min-width: 0;
   height: 100vh;

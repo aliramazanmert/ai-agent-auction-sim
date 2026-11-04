@@ -1,4 +1,4 @@
-import { Html } from "@react-three/drei";
+import { RoundedBox } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { AGENTS, type SettlementRow } from "../engine/model";
 import { PROFILES } from "../profiles";
@@ -34,35 +34,17 @@ export function SceneContent({ rows }: { rows: SettlementRow[] }) {
               />
             </mesh>
 
-            <mesh
+            <RoundedBox
+              args={[1, 1, 1]}
+              radius={0.12}
+              smoothness={4}
               name={`column-${agent.id}`}
               position={[0, height / 2, -0.9]}
               scale={[0.55, height, 0.55]}
             >
-              <boxGeometry args={[1, 1, 1]} />
               <meshStandardMaterial color="#90A4AE" />
-            </mesh>
+            </RoundedBox>
 
-            <Html
-              position={[0, 1.8, 0]}
-              center
-              style={{ pointerEvents: "none" }}
-            >
-              <span className="scene-label">
-                <strong>{agent.name}</strong>
-                <small>{profile.label}</small>
-              </span>
-            </Html>
-
-            {row?.bid !== null && row?.bid !== undefined && (
-              <Html
-                position={[0, Math.max(height + 0.25, 0.4), -0.9]}
-                center
-                style={{ pointerEvents: "none" }}
-              >
-                <span className="bid-label">${row.bid}</span>
-              </Html>
-            )}
           </group>
         );
       })}
